@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+@keyframes fadedownIndicator {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+html, body {
+    height: 100%;
+    background: #272727;
+    background: linear-gradient(270deg, #000000, #272727);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: Roboto, sans-serif;
+}
+.section {
+    height: 100%;
+}
+
+#main {
+    color: white;
+    position: relative;
+}
+#projects {
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+.pos-center {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pos-hcenter {
+    text-align; center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%)
+}
+
+.main-text {
+    white-space: pre;
+    border: 1px;
+    border-style: none none solid none;
+    font-family: Righteous, serif;
+}
+
+.main-text::before {
+    content: "Hi, I'm\A";
+    font-weight: lighter;
+    font-size: 2vh;
+    font-family: Roboto, sans-serif;
+}
+
+.main-text::after {
+    content: "\A A developer from the UK";
+    font-weight: lighter;
+    font-size: 2.5vh;
+    font-family: Roboto, sans-serif;
+}
+
+.main-icon {
+    font-size: 3vh;
+    padding: 1vw;
+    color: white;
+    transition: color 0.25s, font-size 0.25s, background-color 0.25s;
+}
+
+.main-icon:hover {
+    color: black;
+    font-size: 3.75vh;
+    background-color: white;
+}
+
+.main-below-indicator {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5vh;
+    animation-name: fadedownIndicator;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+.projects-title {
+    padding-top: 15px;
+    text-decoration: underline;
+}
+
+.projects-link {
+    text-decoration: none;
+    color: black;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.projects-project {
+    position: relative;
+    border: 1px;
+    border-style: none none solid none;
+    padding: 15px;
+}
